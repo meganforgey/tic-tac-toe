@@ -40,13 +40,13 @@ const checkIfWinner = () => {
     //for each winning combo, check if every tile index index includes a combo?
     winningCombos.forEach((combo) => { 
         if (selectedSquares.every(tileIndex => combo.includes(tileIndex))) {
-            alert('YOU WIN!');
             winner = playerTurn; //setting this so that the winner comes up on the player's turn
+            alert(`YOU WIN, PLAYER ${playerTurn}!`);
             location.reload(); //reloading the page aftereards
             return true;    //not sure why this is here
         }
     });
-    return false; //not sure why this is here
+    //return false; //not sure why this is here
 };
 
 //app's states variables
