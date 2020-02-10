@@ -41,12 +41,10 @@ const checkIfWinner = () => {
     winningCombos.forEach((combo) => { 
         if (selectedSquares.every(tileIndex => combo.includes(tileIndex))) {
             winner = playerTurn; //setting this so that the winner comes up on the player's turn
-            alert(`YOU WIN, PLAYER ${playerTurn}!`);
+            alert(`${colorDefinitions[playerTurn]} wins!`);
             location.reload(); //reloading the page aftereards
-            return true;    //not sure why this is here
         }
     });
-    //return false; //not sure why this is here
 };
 
 //app's states variables
@@ -112,5 +110,3 @@ allTiles.forEach(
 
 
  } 
- 
-
